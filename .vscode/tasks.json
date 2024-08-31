@@ -1,0 +1,39 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Server",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-o",
+                "server",
+                "server.c",
+                "-lssl",
+                "-lcrypto"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "Build Client",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-o",
+                "client",
+                "client.c",
+                "-lssl",
+                "-lcrypto"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$gcc"
+        }
+    ]
+}
